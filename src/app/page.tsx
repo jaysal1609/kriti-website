@@ -1,6 +1,7 @@
 'use client';
 
-import { useAuth } from '@/context/AuthProvider';
+// Update the path below if your AuthProvider is located elsewhere, e.g. '../../context/AuthProvider'
+import { useAuth } from '../context/AuthProvider'; // <-- Update this path as needed, e.g. '../context/AuthProvider' or with the correct file extension
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 

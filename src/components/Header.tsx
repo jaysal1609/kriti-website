@@ -1,6 +1,7 @@
 'use client';
 
-import { useAuth } from '@/context/AuthProvider';
+// Update the import path below if your AuthProvider is located elsewhere
+import { useAuth } from '../context/AuthProvider';
 import Image from 'next/image';
 import Link from 'next/link';
 
