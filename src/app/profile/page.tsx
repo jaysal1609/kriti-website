@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 import { useAuth } from '@/context/AuthProvider';
+import Image from 'next/image';
 
 export default function ProfilePage() {
   const { user } = useAuth();
@@ -40,7 +41,7 @@ export default function ProfilePage() {
 
     setStatus(error ? 'Failed to update' : 'Profile updated');
   };
-
+  /*
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     try {
       setUploading(true);
@@ -108,6 +109,7 @@ export default function ProfilePage() {
       setUploading(false);
     }
   };
+  */
 
   return (
     <main className="min-h-screen px-4 py-10 flex justify-center">
@@ -153,10 +155,12 @@ export default function ProfilePage() {
 
             {profile.avatar_url && (
               <div className="text-center">
-                <img
+                <Image
                   src={profile.avatar_url}
                   alt="Avatar"
-                  className="w-20 h-20 rounded-full mx-auto border"
+                  width={80}
+                  height={80}
+                  className="rounded-full mx-auto border"
                 />
               </div>
             )}
