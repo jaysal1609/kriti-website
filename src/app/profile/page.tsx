@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabaseClient';
-import { useAuth } from '@/context/AuthProvider';
+// Update the import path below to the correct relative path if needed:
+import { useAuth } from '../../context/AuthProvider';
 import Image from 'next/image';
 
 export default function ProfilePage() {
@@ -10,7 +11,7 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState({ full_name: '', avatar_url: '' });
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState('');
-  const [uploading, setUploading] = useState(false);
+  const [uploading] = useState(false);
 
   useEffect(() => {
     const fetchProfile = async () => {
