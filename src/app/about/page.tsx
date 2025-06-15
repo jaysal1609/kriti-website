@@ -8,8 +8,8 @@ export default function AboutPage() {
           🌟 About Kriti Systems
         </h1>
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          At <span className="font-semibold text-orange-600">Kriti Systems</span>, we're
-          on a mission to democratize financial wisdom — one tool at a time. Whether it's
+          At <span className="font-semibold text-orange-600">Kriti Systems</span>, we&apos;re
+          on a mission to democratize financial wisdom — one tool at a time. Whether it&apos;s
           planning your future, comparing loans, or managing everyday finances, Kriti
           Systems empowers individuals and small businesses with smart, easy-to-use
           calculators and decision-making tools.
@@ -25,10 +25,10 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-16 max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">🚀 What's Coming Next?</h2>
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">🚀 What&apos;s Coming Next?</h2>
         <ul className="text-gray-600 text-base space-y-2 list-inside list-disc text-left inline-block">
           <li>🔐 Profile-based recommendations</li>
-          <li>📈 Smart investment & tax tools</li>
+          <li>📈 Smart investment &amp; tax tools</li>
           <li>🎯 Personalized goal planning</li>
           <li>📊 Regional language support</li>
         </ul>
