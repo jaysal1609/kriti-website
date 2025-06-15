@@ -10,7 +10,14 @@ export default function Header() {
   return (
     <header className="bg-white py-4 px-6 flex justify-between items-center shadow-sm">
       <div className="flex items-center space-x-1 sm:space-x-2">
-        <img src="/KritiSystemsLogo.png" alt="Kriti Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-contain"/>
+        <Image
+          src="/KritiSystemsLogo.png"
+          alt="Kriti Logo"
+          width={48}
+          height={48}
+          className="rounded-full object-contain"
+          priority
+        />
         <span className="text-xl sm:text-2xl font-semibold text-gray-800">Kriti Systems</span>
       </div>
       <nav className="flex gap-6 text-gray-600 font-medium items-center">
