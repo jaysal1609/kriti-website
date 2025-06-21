@@ -72,7 +72,7 @@ export default function HomePage() {
           Welcome {user?.user_metadata?.name ?? user?.email ?? 'to Kriti Systems'}
         </h1>
         <p className="text-gray-600 text-lg mb-10">
-          Explore India's smartest financial calculators and get free updates from leading financial institutions.
+          Explore India&#39;s smartest financial calculators and get free updates from leading financial institutions.
         </p>
         
   
