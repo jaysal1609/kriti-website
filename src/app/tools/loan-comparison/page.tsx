@@ -94,7 +94,7 @@ export default function LoanComparison() {
       <div className="text-center">
         <button
           onClick={addLoan}
-          className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition"
+          className="w-full bg-[#FF5722] text-white py-2 rounded hover:bg-[#E64A19] transition-colors"
         >
           ➕ Add Another Loan
         </button>

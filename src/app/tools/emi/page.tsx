@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import JsonLd from '@/components/JsonLd';
 
 export default function EMICalculator() {
   const [principal, setPrincipal] = useState('');
@@ -22,8 +23,24 @@ export default function EMICalculator() {
     setEmi(Math.round(emi));
   };
 
+  // Calculator structured data
+  const calculatorStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "EMI Calculator",
+    "description": "Calculate your loan EMI easily with our free EMI calculator.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kriti Systems",
+      "url": "https://kritisystems.com"
+    },
+    "feesAndCommissionsSpecification": "Free to use",
+    "url": "https://kritisystems.com/tools/emi"
+  };
+
   return (
     <div className="bg-white shadow-lg rounded-xl p-6 max-w-md mx-auto mt-10">
+      <JsonLd data={calculatorStructuredData} />
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">EMI Calculator</h2>
       <div className="space-y-4">
         <input
@@ -47,9 +64,25 @@ export default function EMICalculator() {
           value={tenure}
           onChange={(e) => setTenure(e.target.value)}
         />
+        {/*<button
+          onClick={calculateEMI}
+          style={{
+            width: '100%',
+            backgroundColor: '#F2BD4D',
+            color: 'white',
+            padding: '0.5rem 0',
+            borderRadius: '0.25rem',
+            fontWeight: '500',
+            transition: 'background-color 0.3s'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#E0A922'}
+          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#F2BD4D'}
+        >
+          Calculate EMI
+        </button>*/}
         <button
           onClick={calculateEMI}
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded font-medium transition"
+          className="w-full bg-[#FF5722] text-white py-2 rounded hover:bg-[#E64A19] transition-colors"
         >
           Calculate EMI
         </button>

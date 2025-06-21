@@ -1,6 +1,5 @@
 'use client';
 
-// Update the import path below if your AuthProvider is located elsewhere
 import { useAuth } from '../context/AuthProvider';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,9 +26,11 @@ export default function Header() {
         <Link href="/about">About</Link>
         <Link href="/profile">Profile</Link>
         {!user ? (
-          <Link href="/auth">Login</Link>
+          <Link href="/auth" className="bg-[#FF5722] hover:bg-[#E64A19] text-white px-4 py-2 rounded-md transition-colors">
+            Login
+          </Link>
         ) : (
-          <button onClick={logout} className="text-orange-500 font-semibold hover:underline">
+          <button onClick={logout} className="text-[#FF5722] font-semibold hover:underline">
             Logout
           </button>
         )}

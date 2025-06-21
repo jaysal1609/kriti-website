@@ -104,7 +104,7 @@ export default function RetirementPlanner() {
 
         <button
           onClick={calculateRetirementCorpus}
-          className="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-semibold transition"
+          className="w-full bg-[#FF5722] text-white py-2 rounded hover:bg-[#E64A19] transition-colors"
         >
           Calculate Required Retirement Corpus
         </button>
